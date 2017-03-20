@@ -5,7 +5,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 import reducers from './reducers'
 
-export default function createStore (history) {
+export default function createReduxStore (history) {
   /**
    * Middleware
    * @ignore

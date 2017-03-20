@@ -13,7 +13,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import createBrowserHistory from 'history/createBrowserHistory'
 import { Provider } from 'react-redux'
 
-import createStore from './store'
+import createReduxStore from './store'
 import createRouter from './router.jsx'
 
 /**
@@ -26,7 +26,7 @@ const history = createBrowserHistory()
  * Store
  * @ignore
  */
-const store = createStore(history)
+const store = createReduxStore(history)
 const router = createRouter(history)
 
 /**
