@@ -10,24 +10,10 @@ import ReactDOM from 'react-dom'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-import createBrowserHistory from 'history/createBrowserHistory'
 import { Provider } from 'react-redux'
 
-import createReduxStore from './store'
-import createRouter from './router.jsx'
-
-/**
- * History
- * @ignore
- */
-const history = createBrowserHistory()
-
-/**
- * Store
- * @ignore
- */
-const store = createReduxStore(history)
-const router = createRouter(history)
+import store from './store'
+import router from './router.jsx'
 
 /**
  * Tap Event

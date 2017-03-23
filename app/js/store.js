@@ -1,21 +1,11 @@
 'use strict'
 
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import { routerReducer, routerMiddleware } from 'react-router-redux'
+import { createStore, combineReducers } from 'redux'
 
 import reducers from './reducers'
 
-export default function createReduxStore (history) {
-  /**
-   * Middleware
-   * @ignore
-   */
-  const middleware = routerMiddleware(history)
+const store = createStore(
+  combineReducers(reducers)
+)
 
-  return createStore(
-    combineReducers(
-      Object.assign({}, reducers, { router: routerReducer })
-    ),
-    applyMiddleware(middleware)
-  )
-}
+export default store
