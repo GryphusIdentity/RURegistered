@@ -26,6 +26,21 @@ injectTapEventPlugin()
  * @ignore
  */
 const style = {
+  appContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: '100',
+    position: 'relative',
+  },
+  viewContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    flex: '100',
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '20px'
+  }
 }
 
 /**
@@ -35,11 +50,13 @@ class MainLayout extends React.Component {
 
   render () {
     let { props: { children } } = this
+    let { appContainer, viewContainer } = style
 
     return (
-      <div>
-        <h1>Hello World!</h1>
-        {router}
+      <div style={appContainer}>
+        <div style={viewContainer}>
+          {router}
+        </div>
       </div>
     )
   }

@@ -7,10 +7,11 @@
 import React from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
+import Table from './components/Table.jsx'
+import RURegistered from './components/RURegistered.jsx'
 
-const PageA = (props) => <h1>Hello A</h1>
-const PageB = (props) => <h1>Hello B</h1>
 
+const history = createBrowserHistory()
 /**
  * Export
  * @ignore
@@ -18,8 +19,8 @@ const PageB = (props) => <h1>Hello B</h1>
 export default (
   <Router history={history}>
     <div>
-      <Route exact={true} path="/" component={PageA} />
-      <Route path="/b" component={PageB} />
+      <Route exact={true} path="/" component={RURegistered} />
+      <Route path="/table" component={Table} />
     </div>
   </Router>
 )
