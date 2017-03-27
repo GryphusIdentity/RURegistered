@@ -1,3 +1,7 @@
 'use strict'
 
-export default {}
+import StudentReducer from './StudentReducer'
+
+export default { 
+    students: StudentReducer 
+}
