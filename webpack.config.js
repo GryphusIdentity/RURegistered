@@ -12,7 +12,7 @@ module.exports = {
   entry: {
     app: ['./js/index.jsx'],
     react: ['react', 'react-dom', 'react-router-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux', 'react-tap-event-plugin', 'history'],
-    utils: ['moment', 'material-ui']
+    utils: ['moment', 'material-ui', 'material-ui-datatables']
   },
 
   output: {
