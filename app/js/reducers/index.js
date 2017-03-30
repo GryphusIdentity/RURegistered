@@ -2,6 +2,6 @@
 
 import StudentReducer from './StudentReducer'
 
-export default { 
-    students: StudentReducer 
+export default {
+    students: StudentReducer
 }
