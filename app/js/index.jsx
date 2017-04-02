@@ -48,7 +48,7 @@ const style = {
  */
 class MainLayout extends React.Component {
 
-  render () {
+  render() {
     let { props: { children } } = this
     let { appContainer, viewContainer } = style
 

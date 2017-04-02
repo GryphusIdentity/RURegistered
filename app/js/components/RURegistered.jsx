@@ -83,15 +83,15 @@ const style = {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-  search: (id) => {
-    fetch(`http://localhost:2456/api/v1/student?id=${id}`).then(res => res.json()).then(data => {
-      console.log('DATA', data)
-      dispatch({
-        type: 'LOOKUP_STUDENT_FULFILLED',
-        data
+    search: (id) => {
+      fetch(`http://localhost:2456/api/v1/student?id=${id}`).then(res => res.json()).then(data => {
+        console.log('DATA', data)
+        dispatch({
+          type: 'LOOKUP_STUDENT_FULFILLED',
+          data
+        })
       })
-    })
-  }
+    }
   }
 }
 
@@ -141,13 +141,12 @@ class RURegistered extends React.Component {
             </List>
           </div>
           <div style={rowStyle}>
-            <Table id="G16G2513"/>
+            <Table id="G16G2513" />
           </div>
         </div>
       </div>
     )
   }
-
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(RURegistered)

@@ -1,7 +1,7 @@
 'use strict'
 
 
-export default function StudentReducer (previous={}, action) {
+export default function StudentReducer(previous = {}, action) {
 
   if (action.type === 'LOOKUP_STUDENT_FULFILLED') {
     console.log(action)
