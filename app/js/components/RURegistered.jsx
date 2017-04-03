@@ -14,6 +14,7 @@ import { List, ListItem } from 'material-ui/List'
 import View from './common/View.jsx'
 import Table from './Table.jsx'
 import { connect } from 'react-redux'
+import UserToolbar from './UserToolbar.jsx'
 /**
  * Styles
  */
@@ -96,7 +97,9 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return {}
+  return {
+    MainView : state.mainView
+  }
 }
 
 /**
@@ -121,27 +124,20 @@ class RURegistered extends React.Component {
 
     return (
       <div style={colStyle}>
-        <Toolbar>
-          <ToolbarGroup style={topBarStyle}>
-            <ToolbarTitle text="User Actions" />
-            <FlatButton label="Item 1" />
-            <FlatButton label="Item 2" />
-            <FlatButton label="Item 3" />
-          </ToolbarGroup>
-        </Toolbar>
+        <UserToolbar />
         <div style={rowStyle}>
           <div style={actionStyle}>
             <List >
               <CardHeader
                 subtitle="Data Actions"
               />
-              <ListItem primaryText="Item 1" onTouchTap={ev => this.props.search('G16G2513')} />
+              <ListItem primaryText="Add User" onTouchTap={ev => this.props.search('G16G2513')} />
               <ListItem primaryText="Item 2" />
               <ListItem primaryText="Item 3" />
             </List>
           </div>
           <div style={rowStyle}>
-            <Table id="G16G2513" />
+            <Table/>
           </div>
         </div>
       </div>
