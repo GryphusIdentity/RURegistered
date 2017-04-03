@@ -8,6 +8,12 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
+const columns = [
+  { label: 'Student Name', key: 'displayName', sortable: true },
+  { label: 'Student Number', key: 'uid' },
+  { key: 'mail', label: 'Student Email Address' }
+]
+
 class Table extends Component {
 
   render() {
@@ -16,7 +22,7 @@ class Table extends Component {
         height={'auto'}
         selectable={false}
         showRowHover={true}
-        columns={[{key: 'displayName', label: 'Name'}]}
+        columns={columns}
         data={this.props.students}
         showCheckboxes={false}
         onCellClick={this.handleCellClick}
