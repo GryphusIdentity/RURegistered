@@ -30,10 +30,14 @@ const mapStateToProps = (state, ownProps) => {
   return {}
 }
 
-
+/**
+ * UserToolbar
+ * A Toolbar component at the top of the web app to handle any user interactions:
+ * Session managament, user preferences
+ */
 class UserToolbar extends React.Component {
   render() {
-        let { userToolbarStyle } = styles
+    let { userToolbarStyle } = styles
     return (
       <Toolbar>
         <ToolbarGroup style={userToolbarStyle}>
